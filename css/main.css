@@ -1,0 +1,555 @@
+html,body
+{
+    overflow: hidden;
+}
+body
+{
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    font: 14px "宋体";
+}
+.background
+{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+}
+.start-menu
+{
+    position: absolute;
+    left: 0;
+    bottom: 38px;
+    width: 344px;
+    background-color: rgba(17,85,170,0.8);
+    background-image: linear-gradient(
+        to bottom,
+        rgba(0,0,0,0) 0%,
+        rgba(0,0,0,0.4) 40%,
+        rgba(0,0,0,0) 100%
+    ),linear-gradient(
+        to right top,
+        rgba(0,0,0,0.05),
+        rgba(0,0,0,0.05) 49%,
+        rgba(0,0,0,0) 51%,
+        rgba(0,0,0,0)
+    );
+    box-shadow: 
+        inset 0 1px rgba(0,0,0,0.6),
+        inset 0 -1px rgba(0,0,0,0.6),
+        inset 1px 0 rgba(0,0,0,0.6),
+        inset -1px 0 rgba(0,0,0,0.6),
+        inset 0 2px rgba(255,255,255,0.6),
+        inset 0 -2px rgba(255,255,255,0.6),
+        inset 2px 0 rgba(255,255,255,0.6),
+        inset -2px 0 rgba(255,255,255,0.6);
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    z-index: 1000;
+}
+.start-menu-main
+{
+    float: left;
+    width: 200px;
+    min-height: 300px;
+    margin: 8px;
+    border-radius: 5px;
+    box-shadow: 
+        0 1px rgba(255,255,255,0.3),
+        0 -1px rgba(255,255,255,0.3),
+        1px 0 rgba(255,255,255,0.3),
+        -1px 0 rgba(255,255,255,0.3),
+        inset 0 1px rgba(0,0,0,0.6),
+        inset 0 -1px rgba(0,0,0,0.6),
+        inset 1px 0 rgba(0,0,0,0.6),
+        inset -1px 0 rgba(0,0,0,0.6);
+    background-color: rgba(255,255,255,1);
+}
+.start-menu-main > div
+{
+    margin-bottom: 3px;
+}
+.start-menu-main-split
+{
+    
+}
+.start-menu-side
+{
+    float: left;
+    width: 120px;
+    margin-top: 48px;
+    margin-right: 8px;
+    margin-bottom: 8px;
+}
+.start-menu-side > div
+{
+    margin-bottom: 3px;
+}
+.start-menu-side-split
+{
+    border-top: 1px solid rgba(68,136,238,0.3);
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.start-menu-side-item
+{
+    height: 32px;
+    line-height: 32px;
+    text-indent: 10px;
+    color: rgba(255,255,255,1);
+    border-radius: 5px;
+}
+.start-menu-side-item:hover
+{
+    background-image: linear-gradient(
+        to bottom,
+        rgba(255,255,255,0.2) 0%,
+        rgba(255,255,255,0.2) 45%,
+        rgba(255,255,255,0) 55%,
+        rgba(255,255,255,0) 100%
+    ),radial-gradient(
+        at center center,
+        rgba(255,255,255,0.3) 0%,
+        rgba(255,255,255,0) 80%
+    );
+    box-shadow:
+        0 0 5px rgba(255,255,255,0.3),
+        inset 0 1px rgba(0,0,0,0.6),
+        inset 0 -1px rgba(0,0,0,0.6),
+        inset 1px 0 rgba(0,0,0,0.6),
+        inset -1px 0 rgba(0,0,0,0.6),
+        inset 0 2px rgba(255,255,255,0.3),
+        inset 0 -2px rgba(255,255,255,0.3),
+        inset 2px 0 rgba(255,255,255,0.3),
+        inset -2px 0 rgba(255,255,255,0.3),
+        inset 0 -2px 5px rgba(255,255,255,0.3);
+}
+.start-menu-shutdown
+{
+    position: absolute;
+    right: 48px;
+    bottom: 16px;
+    width: 80px;
+    height: 24px;
+    border-radius: 5px;
+    overflow: hidden;
+    border: 1px solid rgba(0,0,0,0.6);
+}
+.start-menu-shutdown div
+{
+    background-image: linear-gradient(
+        to bottom,
+        rgba(255,255,255,0.4) 0%,
+        rgba(255,255,255,0.3) 45%,
+        rgba(255,255,255,0) 55%,
+        rgba(255,255,255,0) 100%
+    ),radial-gradient(
+        at center center,
+        rgba(255,255,255,0.3) 0%,
+        rgba(255,255,255,0) 80%
+    );
+    box-shadow:
+        inset 0 1px rgba(255,255,255,0.3),
+        inset 0 -1px rgba(255,255,255,0.3),
+        inset 1px 0 rgba(255,255,255,0.3),
+        inset -1px 0 rgba(255,255,255,0.3),
+        inset 0 -2px 5px rgba(255,255,255,0.3);
+}
+.start-menu-shutdown:hover div
+{
+    background-image: linear-gradient(
+        to bottom,
+        rgba(255,255,255,0.6) 0%,
+        rgba(255,255,255,0.3) 45%,
+        rgba(255,255,255,0) 55%,
+        rgba(255,255,255,0) 100%
+    ),radial-gradient(
+        at center center,
+        rgba(255,255,255,0.3) 0%,
+        rgba(255,255,255,0) 80%
+    );
+    box-shadow:
+        inset 0 1px 3px rgba(255,255,255,0.3),
+        inset 0 -1px 3px rgba(255,255,255,0.3),
+        inset 1px 0 3px rgba(255,255,255,0.3),
+        inset -1px 0 3px rgba(255,255,255,0.3),
+        inset 0 -2px 5px rgba(255,255,255,0.3);
+}
+.start-menu-shutdown-button
+{
+    position: absolute;
+    left: 0;
+    right: 24px;
+    top: 0;
+    height: 24px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-right: 1px solid rgba(0,0,0,0.6);
+}
+.start-menu-shutdown-other
+{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 24px;
+    height: 24px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.start-menu-shutdown-other[selected=true]
+{
+    background-image: linear-gradient(
+        to bottom,
+        rgba(255,255,255,0.3) 0%,
+        rgba(255,255,255,0.2) 45%,
+        rgba(255,255,255,0) 55%,
+        rgba(255,255,255,0) 100%
+    ),radial-gradient(
+        at center center,
+        rgba(255,255,255,0.3) 0%,
+        rgba(255,255,255,0) 80%
+    ) !important;
+    box-shadow:
+        inset 0 1px 1px rgba(0,0,0,0.1),
+        inset 0 -1px 1px rgba(0,0,0,0.1),
+        inset 1px 0 1px rgba(0,0,0,0.1),
+        inset -1px 0 1px rgba(0,0,0,0.1) !important;
+}
+.start-menu-shutdown-other:before
+{
+    content: "";
+    position: absolute;
+    left: 7px;
+    top: 5px;
+    border-top: 7px solid transparent;
+    border-bottom: 7px solid transparent;
+    border-left: 10px solid rgba(0,0,0,0.6);
+}
+.start-menu-shutdown-other:after
+{
+    content: "";
+    position: absolute;
+    left: 8px;
+    top: 7px;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 7px solid rgba(255,255,255,0.9);
+}
+.start-menu-user
+{
+    position: absolute;
+    right: 38px;
+    top: -24px;
+    width: 60px;
+    height: 60px;
+    box-shadow: 
+        inset 0 1px rgba(0,0,0,0.6),
+        inset 0 -1px rgba(0,0,0,0.6),
+        inset 1px 0 rgba(0,0,0,0.6),
+        inset -1px 0 rgba(0,0,0,0.6),
+        inset 0 2px rgba(255,255,255,0.6),
+        inset 0 -2px rgba(255,255,255,0.6),
+        inset 2px 0 rgba(255,255,255,0.6),
+        inset -2px 0 rgba(255,255,255,0.6);
+    border-radius: 5px;
+    background-image: linear-gradient(
+        to bottom,
+        rgba(255,255,255,0.9),
+        rgba(255,255,255,0.3)
+    );
+    z-index: 1;
+    cursor: pointer;
+}
+.start-menu-user-icon
+{
+    margin: 5px;
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    box-shadow: 
+        0 1px rgba(255,255,255,0.6),
+        0 -1px rgba(255,255,255,0.6),
+        1px 0 rgba(255,255,255,0.6),
+        -1px 0 rgba(255,255,255,0.6),
+        inset 0 1px rgba(0,0,0,0.6),
+        inset 0 -1px rgba(0,0,0,0.6),
+        inset 1px 0 rgba(0,0,0,0.6),
+        inset -1px 0 rgba(0,0,0,0.6);
+    overflow: hidden;
+}
+.start-menu-user-icon img
+{
+    width: 48px;
+    height: 48px;
+    margin: 1px;
+}
+.taskbar
+{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 38px;
+    background-color: rgba(68,136,238,0.3);
+    box-shadow: inset 0 1px rgba(0,0,0,0.6),inset 0 2px rgba(255,255,255,0.6);
+    z-index: 1000;
+}
+.taskbar > div
+{
+    margin-right: 2px;
+}
+.taskbar > div > img
+{
+    width: 32px;
+    height: 32px;
+    margin: 2px 8px;
+}
+.taskbar-start
+{
+    float: left;
+    width: 48px;
+    height: 36px;
+    border: 1px solid transparent;
+    -webkit-filter: brightness(1);
+    -moz-filter: brightness(1);
+    -ms-filter: brightness(1);
+    -o-filter: brightness(1);
+    filter: brightness(1);
+    transition: all 0.1s linear;
+}
+.taskbar-start:hover
+{
+    -webkit-filter: brightness(1.2);
+    -moz-filter: brightness(1.2);
+    -ms-filter: brightness(1.2);
+    -o-filter: brightness(1.2);
+    filter: brightness(1.2);
+}
+.taskbar-item
+{
+    float: left;
+    width: 48px;
+    height: 36px;
+    border: 1px solid rgba(0,0,0,0.4);
+    box-shadow:
+        0 0 1px rgba(0,0,0,0.6),
+        inset 0 1px rgba(255,255,255,0.6),
+        inset 0 -1px rgba(255,255,255,0.6),
+        inset 1px 0 rgba(255,255,255,0.6),
+        inset -1px 0 rgba(255,255,255,0.6);
+    background-image: linear-gradient(
+        145deg,
+        rgba(255,255,255,0.8) 0%,
+        rgba(255,255,255,0.2) 40%,
+        rgba(255,255,255,0) 45%
+    ),radial-gradient(
+        24px 3px at bottom center,
+        rgba(255,255,255,0.6) 0%,
+        rgba(255,255,255,0) 100%
+    );
+    background-color: rgba(255,255,255,0.1);
+    transition: all 0.1s linear;
+}
+.taskbar-item:hover
+{
+    background-color: rgba(255,255,255,0);
+}
+.taskbar-item:active
+{
+    background-color: rgba(255,255,255,0.3);
+}
+.taskbar-item[focused=true]
+{
+    background-color: rgba(255,255,255,0.7);
+}
+.taskbar-item[focused=true]:hover
+{
+    background-color: rgba(255,255,255,0.5);
+}
+.taskbar-item:active img
+{
+    -webkit-transform: translateX(1px) translateY(1px);
+    -moz-transform: translateX(1px) translateY(1px);
+    -ms-transform: translateX(1px) translateY(1px);
+    -o-transform: translateX(1px) translateY(1px);
+    transform: translateX(1px) translateY(1px);
+}
+.window
+{
+    position: absolute;
+    box-shadow:
+        0 0 10px rgba(0,0,0,0.6),
+        inset 0 1px rgba(0,0,0,0.6),
+        inset 0 -1px rgba(0,0,0,0.6),
+        inset 1px 0 rgba(0,0,0,0.6),
+        inset -1px 0 rgba(0,0,0,0.6),
+        inset 0 2px rgba(255,255,255,0.6),
+        inset 0 -2px rgba(255,255,255,0.6),
+        inset 2px 0 rgba(255,255,255,0.6),
+        inset -2px 0 rgba(255,255,255,0.6);
+    background-color: rgba(68,136,238,0.3);
+    border-radius: 7px;
+    z-index: 1;
+}
+.window-title
+{
+    position: absolute;
+    left: 8px;
+    right: 8px;
+    top: 8px;
+    height: 16px;
+    padding-bottom: 8px;
+    line-height: 16px;
+    text-shadow: 0 0 10px rgba(255,255,255,1);
+    z-index: 1;
+}
+.window-title img
+{
+    float: left;
+    width: 16px;
+    height: 16px;
+    margin-right: 6px;
+}
+.window-button
+{
+    position: absolute;
+    top: 0px;
+    right: 8px;
+    height: 20px;
+    box-shadow: 0 0 1px rgba(255,255,255,0.6);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    z-index: 2;
+}
+.window-button div
+{
+    float: left;
+    height: 20px;
+    box-shadow:
+        inset 0 1px rgba(0,0,0,0.6),
+        inset 0 -1px rgba(0,0,0,0.6),
+        inset 1px 0 rgba(0,0,0,0.6),
+        inset -1px 0 rgba(0,0,0,0.6),
+        inset 0 2px rgba(255,255,255,0.3),
+        inset 0 -2px rgba(255,255,255,0.3),
+        inset 2px 0 rgba(255,255,255,0.3),
+        inset -2px 0 rgba(255,255,255,0.3);
+    transition: all 0.1s linear;
+}
+.window-button div:hover,
+.window-button div:active,
+.window[focused=true] .window-button div
+{
+    background-image: linear-gradient(
+        to bottom,
+        rgba(255,255,255,0.2) 0%,
+        rgba(255,255,255,0.2) 45%,
+        rgba(255,255,255,0) 55%,
+        rgba(255,255,255,0) 100%
+    ),radial-gradient(
+        at center center,
+        rgba(255,255,255,0.3) 0%,
+        rgba(255,255,255,0) 80%
+    );
+    box-shadow:
+        inset 0 1px rgba(0,0,0,0.6),
+        inset 0 -1px rgba(0,0,0,0.6),
+        inset 1px 0 rgba(0,0,0,0.6),
+        inset -1px 0 rgba(0,0,0,0.6),
+        inset 0 2px rgba(255,255,255,0.3),
+        inset 0 -2px rgba(255,255,255,0.3),
+        inset 2px 0 rgba(255,255,255,0.3),
+        inset -2px 0 rgba(255,255,255,0.3),
+        inset 0 -2px 5px rgba(255,255,255,0.3);
+}
+.window:not([focused=true]) .window-button div
+{
+    transition: none;
+}
+.window:not([focused=true]) .window-button div:active
+{
+    transition: all 0.1s linear;
+}
+.window-button div:first-child
+{
+    border-bottom-left-radius: 5px;
+}
+.window-button div:last-child
+{
+    border-bottom-right-radius: 5px;
+}
+.window-button div:not(:first-child)
+{
+    margin-left: -1px;
+}
+.window-button-close
+{
+    width: 50px;
+    background-color: rgba(204,0,0,0);
+}
+.window[focused=true] .window-button-close
+{
+    background-color: rgba(204,0,0,1);
+}
+.window-button-close:hover,
+.window[focused=true] .window-button-close:hover
+{
+    background-color: rgba(255,0,0,1);
+}
+.window-button-close:active,
+.window[focused=true] .window-button-close:active
+{
+    background-color: rgba(170,0,0,1);
+}
+.window-button-minimum,
+.window-button-maximum
+{
+    width: 35px;
+    background-color: rgba(68,136,238,0);
+}
+.window[focused=true] .window-button-minimum,
+.window[focused=true] .window-button-maximum
+{
+    background-color: rgba(68,136,238,0.4);
+}
+.window-button-minimum:hover,
+.window-button-maximum:hover,
+.window[focused=true] .window-button-minimum:hover,
+.window[focused=true] .window-button-maximum:hover
+{
+    background-color: rgba(0,187,255,1);
+}
+.window-button-minimum:active,
+.window-button-maximum:active,
+.window[focused=true] .window-button-minimum:active,
+.window[focused=true] .window-button-maximum:active
+{
+    background-color: rgba(0,153,221,1);
+}
+.window-content
+{
+    position: absolute;
+    left: 8px;
+    right: 8px;
+    top: 32px;
+    bottom: 8px;
+    box-shadow:
+        inset 0 1px rgba(0,0,0,0.6),
+        inset 0 -1px rgba(0,0,0,0.6),
+        inset 1px 0 rgba(0,0,0,0.6),
+        inset -1px 0 rgba(0,0,0,0.6),
+        inset 0 2px rgba(68,136,238,0.6),
+        inset 0 -2px rgba(68,136,238,0.6),
+        inset 2px 0 rgba(68,136,238,0.6),
+        inset -2px 0 rgba(68,136,238,0.6);
+    background-color: rgba(255,255,255,1);
+    z-index: 1;
+}
